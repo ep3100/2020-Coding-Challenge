@@ -44,5 +44,8 @@ function increase_score(id){
 }
 
 $(document).ready(function(){
-  display_scoreboard(scoreboard);
+  $.getJSON("/", function(data) {
+    display_scoreboard(data.scoreboard)
+  });
+  //display_scoreboard(scoreboard);
 })
